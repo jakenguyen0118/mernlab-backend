@@ -3,14 +3,9 @@ const mongoose = require('../db/connection')
 
 const teamSchema = new Schema(
     {
-        name: String
-        // players: [
-        //     {
-        //         ref: 'Players', type: mongoose.Types.ObjectId
-        //     }
-        // ]
+        name: String,
+        img: String,
     },
-    {timestamps: true}
 )
 
 const Team = model('Team', teamSchema)

@@ -8,7 +8,7 @@ const toId = mongoose.Types.ObjectId
 // seed route
 router.get('/seed', (req, res) => {
 	const seedTeam = [
-		{ name: "Team Solo Mid"}
+		{ name: 'Team Solo Mid', img: 'https://i.imgur.com/P1TeW9y.png' },
 	]
 
 	Team.create(seedTeam, (err, data) => {

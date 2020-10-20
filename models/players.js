@@ -5,9 +5,10 @@ const playersSchema = new Schema(
     {
         name: String,
         role: String,
+        img: String,
         team: {ref: 'Team', type: mongoose.Types.ObjectId}
-    }, 
-    { timestamps: true })
+    }
+)
 
 const Players = model('Players', playersSchema)
 
