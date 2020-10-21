@@ -16,6 +16,14 @@ router.get('/seed', (req, res) => {
 	})
 })
 
+router.post('/player/:teamid', async (req, res) => {
+    const player = await Players.create(req.body)
+    const team = await Team.findById(req.params.teamid)
+    team.player.push(player._id)
+    team.save()
+    res.json(player)
+})
+
 // match team with player
 router.get('/:player/:team', async (req, res) => {
     const team = toId(req.params.team)

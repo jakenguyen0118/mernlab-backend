@@ -61,7 +61,7 @@ router.put('/:id', async (req, res) => {
 
 // delete route
 router.delete('/:id', async (req, res) => {
-	res.json(await Players.findOneAndDelete(req.params.id))
+	res.json(await Players.findByIdAndDelete(req.params.id))
 })
 
 module.exports = router
